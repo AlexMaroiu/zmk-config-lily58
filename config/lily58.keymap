@@ -68,3 +68,20 @@
         };
     };
 };
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+};
+
+&mt {
+    tapping-term-ms = <280>;
+    flavor = "tap-preferred";
+    require-prior-idle-ms = <150>;
+};
